@@ -5,16 +5,13 @@
         <div class="card-title">
             <h4 v-if="ogg.title != undefined">{{ogg.title}}</h4>
             <h4 v-else>{{ogg.name}}</h4>
-
             <h4 v-if="ogg.original_title != undefined">{{ogg.original_title}}</h4>
             <h4 v-else>{{ogg.original_name}}</h4>
-
         </div>
 
         <div class="flag">
-            <img v-if="ogg.original_language == 'it' " src="../../assets/flags/italy.png" alt="">
-            <img v-else-if="ogg.original_language == 'en' " src="../../assets/flags/united-kingdom.png" alt="">
-            <img v-else src="" alt="immagine non trovata">
+            <img v-if="img!=null" :src="img" alt="">
+            <span v-else>{{ogg.original_language}}</span>
         </div>
 
         <div>
@@ -23,6 +20,7 @@
                 <span v-else>&#9734;</span>
             </span>
         </div>
+
     </div>
 </template>
 
@@ -35,7 +33,19 @@ export default {
 
     data() {
         return {
-            stelle: this.stars(this.ogg.vote_average)
+            stelle: this.stars(this.ogg.vote_average),
+        }
+    },
+    computed: {
+        img() {
+            let image = ''
+            try {
+                 image = require('../../assets/flags/' + this.ogg.original_language + '.png');
+            }
+            catch {
+                image = null;
+            }
+            return image;
         }
     },
 
@@ -50,6 +60,5 @@ export default {
 
 <style lang="scss" scoped>
 
-// @import url("../../assets/Variabili/Global.scss");
 
 </style>
