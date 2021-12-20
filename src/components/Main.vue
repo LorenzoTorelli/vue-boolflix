@@ -1,14 +1,18 @@
 <template>
-  <div id="main">
+  <div id="main" class="container">
     <input type="text" v-model="searchBar">
     <button @click="searchTV(),searchFilm()">Cliccami</button>
     <!-- <p>{{risultato}}</p> -->
-    <Film v-for="(film,index) in risultatoFilm" :key="index"
-        :ogg = "film"
+    <div class="film-container">
+        <Film v-for="(film,index) in risultatoFilm" :key="index"
+            :ogg = "film"
+            />
+    </div>
+    <div class="serie-container">
+        <Serie v-for="(serie,index) in risultatoTv" :key="index"
+            :ogg = "serie"
         />
-    <Serie v-for="(serie,index) in risultatoTv" :key="index"
-        :ogg = "serie"
-    />
+    </div>
   </div>
 </template>
 
@@ -73,6 +77,14 @@ export default {
 
 </script>
 
-<style>
+<style lang="scss" scoped>
 
+    .film-container, .serie-container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fill, 300px) ;
+        grid-gap: 30px;
+        margin-bottom: 20px;
+    }
+    
 </style>

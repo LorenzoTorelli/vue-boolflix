@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: black;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    background-color: blue;
+    min-height: 400px;
+}
+
+.card {
+    background-color: red;
+}
+.flag img{
+    width: 20px;
+}
+
+.poster-vuoto {
+    width: 200px;
+}
