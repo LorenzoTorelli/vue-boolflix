@@ -26,3 +26,10 @@ body {
 .poster-vuoto {
     width: 200px;
 }
+section {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 300px) ;
+    grid-gap: 30px;
+    margin-bottom: 20px;
+}

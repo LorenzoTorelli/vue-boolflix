@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Main from './components/Main.vue';
+import Main from './components/Macro/Main.vue';
 
 export default {
   name: 'App',
@@ -17,12 +17,6 @@ export default {
 
 <style lang="scss">
 @import url("./assets/Variabili/Global.scss");
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+
 </style>
