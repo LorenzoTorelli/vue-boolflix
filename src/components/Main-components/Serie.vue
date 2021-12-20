@@ -1,7 +1,7 @@
 <template>
-    <div id="film">
-        <h4>{{ogg.title}}</h4>
-        <h4>{{ogg.original_title}}</h4>
+    <div id="serie">
+         <h4>{{ogg.name}}</h4>
+        <h4>{{ogg.original_name}}</h4>
         <img v-if="ogg.original_language == 'it' " src="../../assets/flags/italy.png" alt="">
         <img v-else-if="ogg.original_language == 'en' " src="../../assets/flags/united-kingdom.png" alt="">
         <img v-else src="" alt="immagine non trovata">
@@ -11,11 +11,10 @@
 
 <script>
 export default {
-    name:"Film",
-    props: {
+    name:"Serie",
+     props: {
         ogg: Object,
-    },          
-    
+    },     
 }
 </script>
 
