@@ -4,7 +4,7 @@
             <h2>BOOLFLIX</h2>
         </div>
         <div id="search-section">
-            <input type="text" v-model="searchBar" placeholder="Cerca...." @keyup.enter="search()">
+            <input type="text" v-model="data.searchBar" placeholder="Cerca...." @keyup.enter="search()">
         </div>
     </div>
 </template>
@@ -17,7 +17,6 @@ export default {
     name:"Header",
    data() {
         return {
-            searchBar: '',
             data
         }
     },
@@ -26,7 +25,7 @@ export default {
             const parametri= {
                  params: {
                     api_key:"609576eb1e4d09dcf2d6888012fbf56c",
-                    query: this.searchBar,
+                    query: data.searchBar,
                     language:'it-IT'
                  }
             }

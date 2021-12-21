@@ -28,7 +28,9 @@
             </div>
             <div class="card-sec overview">
                 <strong>Overview: </strong>
-                <p>{{ogg.overview}}</p>
+                <div class="paragrafo">
+                    <p>{{ogg.overview}}</p>
+                </div>
             </div>
         </div>
 
@@ -100,10 +102,13 @@ export default {
 
         .overview { 
             height: 40%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: normal;
-
+            
+            .paragrafo {
+                height: 250px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: normal;
+            }
 
         }
     }
