@@ -7,17 +7,19 @@
 body {
     min-height: 100vh;
     background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
     width: 80%;
     margin: auto;
-    background-color: blue;
     min-height: 400px;
 }
 
 .card {
-    background-color: red;
+    height: 514px;
+    border: 1px solid white;
 }
 .flag img{
     width: 20px;
@@ -29,7 +31,7 @@ body {
 section {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, 300px) ;
+    grid-template-columns: repeat(auto-fill, 342px) ;
     grid-gap: 30px;
     margin-bottom: 20px;
 }
