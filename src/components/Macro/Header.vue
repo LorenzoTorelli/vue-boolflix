@@ -1,10 +1,10 @@
 <template>
     <div id="header">
         <div id="titolo">
-            <h2>BOOLFLIX</h2>
+            <h2 @click="data.clean = 'true', data.searchBar = ''">BOOLFLIX</h2>
         </div>
         <div id="search-section">
-            <input type="text" v-model="data.searchBar" placeholder="Cerca...." @keyup.enter="search()">
+            <input type="text" v-model="data.searchBar" placeholder="Cerca...." v-on:input="search(), data.clean = 'false'">
         </div>
     </div>
 </template>
@@ -61,6 +61,7 @@ export default {
             h2 {
                 color:red;
                 font-size: 30px;
+                cursor: pointer;
             }
         }
         #search-section {
